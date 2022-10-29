@@ -1,6 +1,6 @@
 {
   "name": "@goapptiv/data-validator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Validate data like Mobile, PAN & GST and many more",
   "main": "dist/index.js",
   "keywords": [
@@ -30,9 +30,7 @@
   },
   "author": "Sagar Vaghela <sagar.vaghela@goapptiv.com>",
   "license": "MIT",
-  "dependencies": {
-    "@nestjs/common": "^9.1.6"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@nestjs/cli": "^9.0.0",
     "@types/node": "^18.11.6",
@@ -41,7 +39,5 @@
     "rxjs": "^7.5.7",
     "typescript": "^4.8.4"
   },
-  "peerDependencies": {
-    "@nestjs/common": "^8.0.0"
-  }
+  "peerDependencies": {}
 }
