@@ -6,3 +6,4 @@ export const MOBILE_REGEX = /^([0-9]){10}$/;
 export const EMAIL_REGEX =
   /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 export const VPA_REGEX = /[a-zA-Z0-9.\-_]{2,49}@[a-zA-Z._]{2,49}/;
+export const LANDLINE_REGEX = /^([0-9]){11}$/;

@@ -1,6 +1,7 @@
 import {
   EMAIL_REGEX,
   GST_REGEX,
+  LANDLINE_REGEX,
   MOBILE_REGEX,
   PAN_REGEX,
   PIN_CODE_REGEX,
@@ -57,6 +58,14 @@ export class DataValidationService {
   }
 
   /**
+   * validates landline number
+   */
+  static isLandlineNumberValid(landlineNumber: string): boolean {
+    const landlineNumberRegex = LANDLINE_REGEX;
+    return landlineNumberRegex.test(landlineNumber);
+  }
+
+  /**
    * parses gst number
    */
   static parseGstNumber(gstNumber: string, validate = true): string | null {
@@ -94,5 +103,13 @@ export class DataValidationService {
   static parseEmail(email: string): string | null {
     const data = email.replace(/[^a-zA-Z0-9@.]/g, '');
     return this.isEmailValid(data) ? data : null;
+  }
+
+  /**
+   * parses landline number
+   */
+  static parseLandlineNumber(landlineNumber: string): string | null {
+    const data = landlineNumber.replace(/[^0-9]/g, '');
+    return this.isLandlineNumberValid(data) ? data : null;
   }
 }

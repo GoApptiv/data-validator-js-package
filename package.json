@@ -1,6 +1,6 @@
 {
   "name": "@goapptiv/data-validator",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Validate data like Mobile, PAN & GST and many more",
   "main": "dist/index.js",
   "keywords": [
