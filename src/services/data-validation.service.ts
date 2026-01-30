@@ -1,6 +1,7 @@
 import {
   EMAIL_REGEX,
   GST_REGEX,
+  INDIAN_10_DIGIT_MOBILE_REGEX,
   LANDLINE_REGEX,
   MOBILE_REGEX,
   PAN_REGEX,
@@ -39,6 +40,15 @@ export class DataValidationService {
   static isMobileNumberValid(mobileNumber: string): boolean {
     const mobileNumberRegex = MOBILE_REGEX;
     return mobileNumberRegex.test(mobileNumber);
+  }
+
+  /**
+   * validates indian 10 digit mobile number
+   */
+  static isIndian10DigitMobileValid(mobileNumber: string): boolean {
+    const isMobileNumberValid = this.isMobileNumberValid(mobileNumber);
+    const indian10DigitMobileRegex = INDIAN_10_DIGIT_MOBILE_REGEX;
+    return isMobileNumberValid && indian10DigitMobileRegex.test(mobileNumber);
   }
 
   /**
