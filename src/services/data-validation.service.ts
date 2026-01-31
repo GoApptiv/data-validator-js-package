@@ -46,9 +46,10 @@ export class DataValidationService {
    * validates indian 10 digit mobile number
    */
   static isIndian10DigitMobileValid(mobileNumber: string): boolean {
-    const isMobileNumberValid = this.isMobileNumberValid(mobileNumber);
-    const indian10DigitMobileRegex = INDIAN_10_DIGIT_MOBILE_REGEX;
-    return isMobileNumberValid && indian10DigitMobileRegex.test(mobileNumber);
+    return (
+      DataValidationService.isMobileNumberValid(mobileNumber) &&
+      INDIAN_10_DIGIT_MOBILE_REGEX.test(mobileNumber)
+    );
   }
 
   /**
